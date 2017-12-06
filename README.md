@@ -2,7 +2,7 @@
 Given the range and number of points, output the png file of Mandelbrot Set.
 
 ## MPI Static version
-In load balancing the term of static means predefined the job you need to do without any communication. My static strategy is if <b> my rank = (id%size) <b/> then do the job. This strategy is easy implemented and has good performance due to the feature of Mandelbrot Set. <br/> <br/>
+In load balancing the term of static means predefined the job you need to do without any communication. My static strategy is if <b> my rank = (id%size) </b> then do the job. This strategy is easy implemented and has good performance due to the feature of Mandelbrot Set. <br/> <br/>
 考慮以下的圖，若只是單純簡單的 range partition job 給 worker 就會導致 2, 4 的工作量非常少，相反的上述的策略能夠使每個人的工作量較平均的分開而達到不錯的效能。
 ![Flow chart](img/figure.png) <br/>
 
